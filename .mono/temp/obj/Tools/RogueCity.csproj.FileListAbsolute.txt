@@ -4,3 +4,9 @@ D:\ProgramData\Games\GodotGames\My Games\RogueCity\.mono\temp\bin\Tools\RogueCit
 D:\ProgramData\Games\GodotGames\My Games\RogueCity\.mono\temp\bin\Tools\RogueCity.pdb
 D:\ProgramData\Games\GodotGames\My Games\RogueCity\.mono\temp\obj\Tools\RogueCity.dll
 D:\ProgramData\Games\GodotGames\My Games\RogueCity\.mono\temp\obj\Tools\RogueCity.pdb
+D:\Users\Jean\Documents\GitHub\transcendance\.mono\temp\bin\Tools\RogueCity.dll
+D:\Users\Jean\Documents\GitHub\transcendance\.mono\temp\bin\Tools\RogueCity.pdb
+D:\Users\Jean\Documents\GitHub\transcendance\.mono\temp\obj\Tools\RogueCity.csprojAssemblyReference.cache
+D:\Users\Jean\Documents\GitHub\transcendance\.mono\temp\obj\Tools\RogueCity.csproj.CoreCompileInputs.cache
+D:\Users\Jean\Documents\GitHub\transcendance\.mono\temp\obj\Tools\RogueCity.dll
+D:\Users\Jean\Documents\GitHub\transcendance\.mono\temp\obj\Tools\RogueCity.pdb
