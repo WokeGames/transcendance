@@ -14,6 +14,11 @@ namespace RogueCity.Scripts.CSharp
 		public GroundTileScript[] tiles;
 		[Export]
 		public int size = 0;
+
+		public Biomes ()
+		{
+			tiles = new GroundTileScript[1];
+		}
 		public override void _Ready()
 		{
 			var biomes = GetChildren();

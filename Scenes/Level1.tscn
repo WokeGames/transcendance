@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Scripts/CSharp/Biomes.cs" type="TextFile" id=1]
-[ext_resource path="res://Scripts/CSharp/GroundTileScript.cs" type="TextFile" id=2]
-[ext_resource path="res://Scripts/CSharp/Ground.cs" type="TextFile" id=3]
+[ext_resource path="res://Scripts/CSharp/Biomes.cs" type="Script" id=1]
+[ext_resource path="res://Scripts/CSharp/GroundTileScript.cs" type="Script" id=2]
+[ext_resource path="res://Scripts/CSharp/Ground.cs" type="Script" id=3]
 [ext_resource path="res://Tiles/tileset.tres" type="TileSet" id=4]
 [ext_resource path="res://2DAssets/People/Villageois_1.png" type="Texture" id=5]
 [ext_resource path="res://2DAssets/People/Villageois_1_Idle.png" type="Texture" id=6]
@@ -24,7 +24,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11 ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 resource_name = "Run"
 length = 1.1
 loop = true
@@ -41,7 +41,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=3]
 length = 0.8
 loop = true
 tracks/0/type = "value"
@@ -113,8 +113,8 @@ frame = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="KinematicBody2D"]
 anims/Idle = SubResource( 1 )
-anims/Run = SubResource( 3 )
-anims/Walk = SubResource( 2 )
+anims/Run = SubResource( 2 )
+anims/Walk = SubResource( 3 )
 
 [node name="IdleSprite" type="Sprite" parent="KinematicBody2D"]
 position = Vector2( -287.292, -127.685 )
