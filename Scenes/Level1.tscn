@@ -4,6 +4,9 @@
 [ext_resource path="res://Scripts/CSharp/GroundTileScript.cs" type="Script" id=2]
 [ext_resource path="res://Scripts/CSharp/Ground.cs" type="Script" id=3]
 
+
+
+
 [node name="World" type="Node2D"]
 
 [node name="Biomes" type="Node2D" parent="."]
