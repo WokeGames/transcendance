@@ -1,25 +1,24 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scripts/CSharp/Biomes.cs" type="Script" id=1]
-[ext_resource path="res://Scripts/CSharp/GroundTileScript.cs" type="Script" id=2]
-[ext_resource path="res://Scripts/CSharp/Ground.cs" type="Script" id=3]
-
-
-
+[ext_resource path="res://Scripts/CSharp/Biomes.cs" type="TextFile" id=1]
+[ext_resource path="res://Scripts/CSharp/GroundTileScript.cs" type="TextFile" id=2]
+[ext_resource path="res://Scripts/CSharp/Ground.cs" type="TextFile" id=3]
+[ext_resource path="res://Tiles/tileset.tres" type="TileSet" id=4]
 
 [node name="World" type="Node2D"]
 
 [node name="Biomes" type="Node2D" parent="."]
-editor/display_folded = true
 visible = false
 script = ExtResource( 1 )
 
 [node name="Plane" type="Node2D" parent="Biomes"]
+editor/display_folded = true
 
 [node name="PlaneTile1" type="Node2D" parent="Biomes/Plane"]
 script = ExtResource( 2 )
 
 [node name="Forest" type="Node2D" parent="Biomes"]
+editor/display_folded = true
 
 [node name="ForestTile1" type="Node2D" parent="Biomes/Forest"]
 script = ExtResource( 2 )
@@ -34,6 +33,7 @@ script = ExtResource( 2 )
 script = ExtResource( 2 )
 
 [node name="Winter" type="Node2D" parent="Biomes"]
+editor/display_folded = true
 
 [node name="WinterTile1" type="Node2D" parent="Biomes/Winter"]
 script = ExtResource( 2 )
@@ -46,3 +46,8 @@ script = ExtResource( 2 )
 
 [node name="Ground" type="Node2D" parent="."]
 script = ExtResource( 3 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 4 )
+format = 1
+tile_data = PoolIntArray( -131072, 13, 0, -131071, 13, 0, -131070, 13, 0, -131069, 13, 0, -131068, 13, 0, -131067, 13, 0, -131066, 14, 0, -131065, 13, 0, -131064, 13, 0, -131063, 13, 0, -131062, 14, 0, -131061, 13, 0, -131060, 13, 0, -131059, 13, 0, -131058, 13, 0, -131057, 13, 0, -65536, 16, 0, -65535, 15, 0, -65534, 16, 0, -65533, 15, 0, -65532, 15, 0, -65531, 15, 0, -65530, 17, 0, -65529, 15, 0, -65528, 16, 0, -65527, 15, 0, -65526, 17, 0, -65525, 15, 0, -65524, 16, 0, -65523, 15, 0, -65522, 16, 0, -65521, 15, 0, 0, 6, 0, 1, 6, 0, 2, 6, 0, 3, 6, 0, 4, 6, 0, 5, 6, 0, 6, 6, 0, 7, 6, 0, 8, 6, 0, 9, 6, 0, 10, 6, 0, 11, 6, 0, 12, 6, 0, 13, 6, 0, 14, 6, 0, 15, 6, 0, 65536, 7, 0, 65537, 7, 0, 65538, 7, 0, 65539, 7, 0, 65540, 7, 0, 65541, 7, 0, 65542, 7, 0, 65543, 7, 0, 65544, 7, 0, 65545, 7, 0, 65546, 7, 0, 65547, 7, 0, 65548, 7, 0, 65549, 7, 0, 65550, 7, 0, 65551, 7, 0 )
