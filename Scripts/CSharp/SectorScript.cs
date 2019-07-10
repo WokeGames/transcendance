@@ -36,40 +36,44 @@ namespace RogueCity.Scripts.CSharp
 
 		private void GenerateSector()
 		{
-			Random r = new Random();
-			int biomeSize = r.Next() % 5 + 3;
-			Biome currentBiome = r.Next() % 2 == 1 ? Biome.Forest : Biome.Winter;
-			var startLeft = true;
-			if (LeftSector != null)
-			{
-				currentBiome = LeftSector.RightTile.Biome;
-				startLeft = false;
-			}
-			else
-			{
-				if (RightSector!=null)
-				{
-					currentBiome = RightSector.LeftTile.Biome;
-				}
-			}
-			int lastFilledTile = 0;
-			if( startLeft)
-			{
-				lastFilledTile = groundTiles.Length - 1;
-			}
-			int firstEmptyTileIndex = startLeft ? 0 : groundTiles.Length - 1;
-			while (groundTiles[lastFilledTile] == null)
-			{
-				var tilesOfBiome = Biomes.tiles.Where(t => t.Biome == currentBiome).ToList();
-				var tilesLeft = groundTiles.Count(t => t == null);
-				var biomeSectorTemp = new GroundTileScript[biomeSize];
-				for (int i = 0; i < biomeSize; i++)
-				{
-					biomeSectorTemp[i] = new GroundTileScript(tilesOfBiome[r.Next()%tilesOfBiome.Count]);
-				}
-				firstEmptyTileIndex = CopyTempInSector(biomeSectorTemp, startLeft, firstEmptyTileIndex);
-				currentBiome = r.Next() % 2 == 1 ? Biome.Forest : Biome.Winter;
-			}
+			//Random r = new Random();
+			//int biomeSize = r.Next() % 5 + 3;
+			//Biome currentBiome = r.Next() % 2 == 1 ? Biome.Forest : Biome.Winter;
+			//var startLeft = true;
+			//if (LeftSector != null)
+			//{
+			//	currentBiome = LeftSector.RightTile.Biome;
+			//	startLeft = false;
+			//}
+			//else
+			//{
+			//	if (RightSector!=null)
+			//	{
+			//		currentBiome = RightSector.LeftTile.Biome;
+			//	}
+			//}
+			//int lastFilledTile = 0;
+			//if( startLeft)
+			//{
+			//	lastFilledTile = groundTiles.Length - 1;
+			//}
+			//int firstEmptyTileIndex = startLeft ? 0 : groundTiles.Length - 1;
+			//while (groundTiles[lastFilledTile] == null)
+			//{
+			//	GD.Print("Hi");
+			//	GD.Print(currentBiome);
+			//	GD.Print(Biomes.tiles);
+			//	var tilesOfBiome = Biomes.tiles.Where(t => t.Biome == currentBiome).ToList();
+			//	GD.Print(tilesOfBiome.Count);
+			//	var tilesLeft = groundTiles.Count(t => t == null);
+			//	var biomeSectorTemp = new GroundTileScript[biomeSize];
+			//	for (int i = 0; i < biomeSize; i++)
+			//	{
+			//		biomeSectorTemp[i] = new GroundTileScript(tilesOfBiome[r.Next()%tilesOfBiome.Count]);
+			//	}
+			//	firstEmptyTileIndex = CopyTempInSector(biomeSectorTemp, startLeft, firstEmptyTileIndex);
+			//	currentBiome = r.Next() % 2 == 1 ? Biome.Forest : Biome.Winter;
+			//}
 		}
 
 		public override string ToString()
